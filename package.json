@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description": "test for moxygen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doxygen-download": "doxygen --download",
+    "doxygen": "doxygen --docs --configPath=Doxyfile",
+    "moxygen": "moxygen ./doxygen/xml --classes --output ./moxygen/%s.md",
+    "doc": "npm run doxygen && npm run moxygen"
+  },
+  "author": "FlamFilo",
+  "devDependencies": {
+    "doxygen": "^0.3.2",
+    "moxygen": "^0.8.0"
+  }
+}
